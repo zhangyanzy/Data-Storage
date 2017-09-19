@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.tarenwang.data_storage.SDCardActivity.Present" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/activity_sdcard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.tarenwang.data_storage.SDCardActivity">
+
+        <EditText
+            android:id="@+id/et_sd_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="存储的文件名"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/et_sd_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="存储的文件内容"
+            android:padding="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/save_sd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="@{presenter.onClick}"
+                android:text="保存" />
+
+            <Button
+                android:id="@+id/read_sd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="@{presenter.onClick}"
+                android:text="读取" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/save_diy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="@{presenter.onClick}"
+                android:text="保存-自定义位置" />
+
+            <Button
+                android:id="@+id/read_diy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="@{presenter.onClick}"
+                android:text="读取-自定义位置" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</layout>
+

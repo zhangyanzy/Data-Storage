@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.tarenwang.data_storage.MainActivity.Presenter" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.tarenwang.data_storage.MainActivity">
+
+        <Button
+            android:id="@+id/sp_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{presenter.onClick}"
+            android:text="SharePreference" />
+
+        <Button
+            android:id="@+id/inside_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{presenter.onClick}"
+            android:text="内部文件存储" />
+
+        <Button
+            android:id="@+id/external_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{presenter.onClick}"
+            android:text="外部文件存储" />
+
+        <Button
+            android:id="@+id/sqlite_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{presenter.onClick}"
+            android:text="数据库存储" />
+
+        <Button
+            android:id="@+id/server_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{presenter.onClick}"
+            android:text="远程服务器存储" />
+
+        <Button
+            android:id="@+id/sqlite_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{presenter.onClick}"
+            android:text="SQLiteDemo" />
+    </LinearLayout>
+</layout>
+
